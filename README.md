@@ -1,17 +1,17 @@
-# PanoramaKitDemo
+# HMS PanoramaKit Demo
 
 ## Table of Contents
  * [Introduction](#introduction)
- * [Getting Started](#installation)
+ * [Getting Started](#getting-started)
  * [Supported Environments](#supported-environments)
- * [Result](#Result)
+ * [Result](#result)
  * [License](#license)
 
 ## Introduction
-    The PanoramaKitDemo app demonstrates some samples to call the panorama view.
-        Some interfaces of panorama sdk are added in new versions,  
-    Please make sure the version is correct when compiling.
-    [Read more about HMS Panorama Kit](https://developer.huawei.com/consumer/cn/hms/huawei-panoramakit).
+The PanoramaKitDemo app demonstrates some samples to call the panorama view.
+Some interfaces of panorama sdk are added in new versions, Please make sure the version is correct when compiling.
+
+[Read more about HMS Panorama Kit](https://developer.huawei.com/consumer/cn/hms/huawei-panoramakit).
 
 ## Getting Started
    1. Check whether the Android studio development environment is ready. Open the sample code project directory with file "build.gradle" in Android Studio. Run TestApp on your divice or simulator which have installed latest Huawei Mobile Service(HMS).
@@ -32,8 +32,7 @@
 - Internet is required for upgrade.
 
 ## Result
-   <img src="images/result.jpg" >
+   <img src="https://github.com/HMS-Core/hms-panoram-demo/blob/master/images/result.JPG" width=250 title="Panoramakit Demo" div align=center border=5>
 
 ##  License
-    PanoramaKitDemo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
+HMS PanoramaKit Demo is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
