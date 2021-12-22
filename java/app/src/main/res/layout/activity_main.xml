@@ -15,8 +15,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/buttonInHmsWithPerm"
+        android:text="@string/button_in_hms_with_permission"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/buttonInHmsRing"
         android:text="@string/button_in_hms_ring"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonInHmsPickPhoto"
+        android:text="@string/button_in_hms_pick_photo"/>
 
     <Button
         android:layout_width="match_parent"
@@ -27,7 +39,25 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/buttonInAppRing"
+        android:text="@string/button_in_app_ring"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonInAppPolar"
+        android:text="@string/button_in_app_polar"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/buttonInAppVideo"
         android:text="@string/button_in_app_video"/>
+<!--
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonInAppTest"
+        android:text="@string/button_in_app_video"/> -->
 
 </LinearLayout>

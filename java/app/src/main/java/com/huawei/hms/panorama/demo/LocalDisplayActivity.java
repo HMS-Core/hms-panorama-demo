@@ -114,6 +114,12 @@ public class LocalDisplayActivity extends Activity implements View.OnTouchListen
             case R.id.buttonInAppSpherical:
                 doDisplaySpherical();
                 break;
+            case R.id.buttonInAppRing:
+                doDisplayRing();
+                break;
+            case R.id.buttonInAppPolar:
+                doDisplayPolar();
+                break;
             case R.id.buttonInAppVideo:
                 doDisplayVideo();
                 break;
@@ -144,6 +150,33 @@ public class LocalDisplayActivity extends Activity implements View.OnTouchListen
         if (ret != ResultCode.SUCCEED) {
             logAndToast("doDisplaySpherical setImage failed " + ret);
             return;
+        }
+
+        addViewToLayout();
+    }
+
+    private void doDisplayRing() {
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pano);
+        int ret = mLocalInstance.setImage(uri, PanoramaInterface.IMAGE_TYPE_RING);
+        if (ret != ResultCode.SUCCEED) {
+            logAndToast("doDisplayRing setImage failed " + ret);
+            return;
+        }
+
+        addViewToLayout();
+    }
+
+    private void doDisplayPolar() {
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pano);
+        int ret = mLocalInstance.setImage(uri, PanoramaInterface.IMAGE_TYPE_SPHERICAL);
+        if (ret != ResultCode.SUCCEED) {
+            logAndToast("doDisplayPolar setImage failed " + ret);
+            return;
+        }
+
+        ret = mLocalInstance.setValue(PanoramaInterface.KEY_RENDER_MODE, PanoramaInterface.VALUE_RENDER_MODE_POLAR);
+        if (ret != ResultCode.SUCCEED) {
+            logAndToast("doDisplayPolar setValue render mode failed");
         }
 
         addViewToLayout();

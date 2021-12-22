@@ -1,5 +1,5 @@
 ## 华为全景服务示例代码
-中文 | [English](https://github.com/HMS-Core/hms-panoram-demo)
+中文 | [English](README.md)
 
 ## 目录
 
@@ -9,8 +9,8 @@
  * [环境要求](#环境要求)
  * [示例代码](#示例代码)
  * [授权许可](#授权许可)
- 
- 
+
+
 ## 简介
 华为全景服务（HUAWEI Panorama Kit）示例代码可以帮助您编写全景图应用，实现全景展示。点击[此处](https://developer.huawei.com/consumer/cn/hms/huawei-panoramakit)，了解更多华为全景服务相关信息。
 

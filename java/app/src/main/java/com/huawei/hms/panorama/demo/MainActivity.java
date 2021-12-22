@@ -45,8 +45,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private static final String LOG_TAG = "MainActivity";
 
     private Button mButtonDisplayInHms;
+    private Button mButtonDisplayInHmsWithPerm;
     private Button mButtonDisplayInHmsRing;
+    private Button mButtonDisplayInHmsPickPhoto;
     private Button mButtonDisplayInAppSpherical;
+    private Button mButtonDisplayInAppRing;
+    private Button mButtonDisplayInAppPolar;
     private Button mButtonDisplayInAppVideo;
 
     @Override
@@ -56,10 +60,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         mButtonDisplayInHms = findViewById(R.id.buttonInHms);
         mButtonDisplayInHms.setOnClickListener(this);
+        mButtonDisplayInHmsWithPerm = findViewById(R.id.buttonInHmsWithPerm);
+        mButtonDisplayInHmsWithPerm.setOnClickListener(this);
         mButtonDisplayInHmsRing = findViewById(R.id.buttonInHmsRing);
         mButtonDisplayInHmsRing.setOnClickListener(this);
+        mButtonDisplayInHmsPickPhoto = findViewById(R.id.buttonInHmsPickPhoto);
+        mButtonDisplayInHmsPickPhoto.setOnClickListener(this);
         mButtonDisplayInAppSpherical = findViewById(R.id.buttonInAppSpherical);
         mButtonDisplayInAppSpherical.setOnClickListener(this);
+        mButtonDisplayInAppRing = findViewById(R.id.buttonInAppRing);
+        mButtonDisplayInAppRing.setOnClickListener(this);
+        mButtonDisplayInAppPolar = findViewById(R.id.buttonInAppPolar);
+        mButtonDisplayInAppPolar.setOnClickListener(this);
         mButtonDisplayInAppVideo = findViewById(R.id.buttonInAppVideo);
         mButtonDisplayInAppVideo.setOnClickListener(this);
 
@@ -74,10 +86,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         switch (view.getId()) {
             case R.id.buttonInHms:
+            case R.id.buttonInHmsWithPerm:
             case R.id.buttonInHmsRing:
+            case R.id.buttonInHmsPickPhoto:
                 displayInHms(view.getId());
                 break;
             case R.id.buttonInAppSpherical:
+            case R.id.buttonInAppRing:
+            case R.id.buttonInAppPolar:
             case R.id.buttonInAppVideo:
                 displayInApp(view.getId());
                 break;
@@ -137,10 +153,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.buttonInHms:
                 Panorama.getInstance().loadImageInfo(this, uri).setResultCallback(new ResultCallbackImpl());
                 break;
+            case R.id.buttonInHmsWithPerm:
+                Panorama.getInstance().loadImageInfoWithPermission(this, uri)
+                        .setResultCallback(new ResultCallbackImpl());
+                break;
             case R.id.buttonInHmsRing:
                 Panorama.getInstance()
                         .loadImageInfo(this, uri, PanoramaInterface.IMAGE_TYPE_RING)
                         .setResultCallback(new ResultCallbackImpl());
+                break;
+            case R.id.buttonInHmsPickPhoto:
+                pickPhotoAndDisplay();
                 break;
             default:
                 logAndToast("displayInHms invalid id " + id);
